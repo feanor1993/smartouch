@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'PT Sans Narrow', sans-serif !important;
+}
+html { overflow-x:  hidden; }
+.technologies{
+    position: relative;
+    left: 3%;
+
+}
+h2{
+    font-size: 20px !important;
+}
+.frame{
+    float: right;
+}
+
+.my_tech {
+    width: 280px;
+    height: 420px;
+    overflow: hidden;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 2px 10px 2px;
+    padding: 5px;
+    position: relative;
+
+}
+
+.my_tech_info {
+    height: 100%;
+    display: block;
+    padding: 5px;
+    position: absolute;
+}
+
+.my_tech_info img {
+    width: 300px !important;
+    float: left;
+    margin: 20px;
+
+}
+
+.modal-text-info {
+    font-size: 16px;
+    /*color: #fff;*/
+}
+
+.my_tech img {
+    width: 100%;
+}
+
+.text-info {
+    font-size: 15px;
+
+}
+
+.my_tech figcaption {
+    display: none;
+}
+
+.categories {
+    display: block;
+    margin-top: 20px;
+    height: 50px;
+    position: relative;
+    left: 20%;
+}
+
+.categories li {
+    color: gray;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline;
+    font-size: 22px;
+    margin: 10px 20px;
+}
+
+.open_modal {
+    text-decoration: none;
+    color: #6a6a6a;
+
+}
+
+.modal_div {
+    width: 900px;
+    height: 500px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 5px #000 solid;
+    background: #fff;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -250px;
+    margin-left: -450px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+
+}
+
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_div .modal_close {
+    /*color: #ffffff;*/
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Пoдлoжкa */
+#overlay {
+    z-index: 3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position: fixed; /* всегдa перекрывaет весь сaйт */
+    background-color: #000; /* чернaя */
+    opacity: 0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity: 0.8; /* фикс прозрачности для старых браузеров */
+    filter: alpha(opacity=80);
+    width: 100%;
+    height: 100%; /* рaзмерoм вo весь экрaн */
+    top: 0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+    left: 0;
+    cursor: pointer;
+    display: none; /* в oбычнoм сoстoянии её нет) */
+}
